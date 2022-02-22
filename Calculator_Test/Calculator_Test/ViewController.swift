@@ -99,6 +99,10 @@ class ViewController: UIViewController {
                     break
                 }
                 
+                if let result = Double(self.result), result.truncatingRemainder(dividingBy: 1) == 0 {
+                    self.result = "\(Int(result))"
+                }
+                
                 self.firstOperand = self.result
                 self.numberOutputLabel.text = self.result
             }
